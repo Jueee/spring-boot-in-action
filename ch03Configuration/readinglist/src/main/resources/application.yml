@@ -1,0 +1,11 @@
+server:
+  port: 8000
+  ssl:
+    key-store: mykeys.jks
+    key-store-password: springboot
+    key-password: springboot
+spring:
+  banner:
+    image:
+      location: classpath:banner.jpg
+    location: classpath:banner.txt
