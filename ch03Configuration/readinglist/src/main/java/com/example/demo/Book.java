@@ -1,9 +1,12 @@
 package com.example.demo;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity // 表明它是一个JPA实体
 public class Book {
@@ -11,7 +14,8 @@ public class Book {
     @Id // 说明这个字段是实体的唯一标识，并且这个字段的值是自动生成的。
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String reader;
+    @ManyToOne(cascade = {CascadeType.ALL},fetch = FetchType.EAGER)
+    private Reader reader;
     private String isbn;
     private String title;
     private String author;
@@ -25,11 +29,11 @@ public class Book {
         this.id = id;
     }
 
-    public String getReader() {
+    public Reader getReader() {
         return reader;
     }
 
-    public void setReader(String reader) {
+    public void setReader(Reader reader) {
         this.reader = reader;
     }
 

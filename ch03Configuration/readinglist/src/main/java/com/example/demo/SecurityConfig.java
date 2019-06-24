@@ -9,6 +9,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 
 @Configuration
@@ -17,6 +18,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Autowired
     private ReaderRepository readerRepository;
+    
+    @Autowired
+    private UserDetailsService customUserService;
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -34,8 +38,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         auth.userDetailsService(new UserDetailsService() {  // 定义自定义  UserDetailsService
             @Override
             public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-                return readerRepository.getOne(username);
+                UserDetails userDetails = readerRepository.getOne(username);
+                if (userDetails != null) {
+                  return userDetails;
+                }
+                throw new UsernameNotFoundException("User '" + username + "' not found.");
             }
-        });
+        })
+        .passwordEncoder(new BCryptPasswordEncoder());
     }
+//    
+//    @Bean
+//    public static NoOpPasswordEncoder passwordEncoder() {
+//        return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
+//    }
 }

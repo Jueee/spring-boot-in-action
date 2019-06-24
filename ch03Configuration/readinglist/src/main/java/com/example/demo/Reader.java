@@ -50,7 +50,7 @@ public class Reader implements UserDetails {
   public Collection<? extends GrantedAuthority> getAuthorities() {
     return Arrays.asList(new SimpleGrantedAuthority("ROLE_READER"));    // 授予READER权限
   }
-
+  
   @Override
   public boolean isAccountNonExpired() {    // 判断帐号是否已经过期
     return true;    // 不过期
