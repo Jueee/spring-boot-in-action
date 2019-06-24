@@ -1,8 +1,6 @@
 package com.example.demo;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,7 +12,7 @@ public class Book {
     @Id // 说明这个字段是实体的唯一标识，并且这个字段的值是自动生成的。
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @ManyToOne(cascade = {CascadeType.ALL},fetch = FetchType.EAGER)
+    @ManyToOne
     private Reader reader;
     private String isbn;
     private String title;
