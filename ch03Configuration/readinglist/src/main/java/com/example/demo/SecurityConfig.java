@@ -2,6 +2,7 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -11,16 +12,13 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-
+@Profile("production")
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
     @Autowired
     private ReaderRepository readerRepository;
-    
-    @Autowired
-    private UserDetailsService customUserService;
     
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -45,11 +43,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
                 throw new UsernameNotFoundException("User '" + username + "' not found.");
             }
         })
-        .passwordEncoder(new BCryptPasswordEncoder());
+        .passwordEncoder(new BCryptPasswordEncoder());// 密码加密，加密方法见 BCryptPasswordEncoderTests
     }
-//    
-//    @Bean
-//    public static NoOpPasswordEncoder passwordEncoder() {
-//        return (NoOpPasswordEncoder) NoOpPasswordEncoder.getInstance();
-//    }
+    
 }

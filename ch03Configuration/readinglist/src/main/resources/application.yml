@@ -1,11 +1,24 @@
+logging:
+  level:
+    root: INFO
+
+--- 
+
+spring:
+  profiles: production
 server:
-  port: 8000
+  port: 8443
   ssl:
     key-store: mykeys.jks
     key-store-password: springboot
     key-password: springboot
+    
+--- 
+
 spring:
-  banner:
-    image:
-      location: classpath:banner.jpg
-    location: classpath:banner.txt
+  profiles: test
+server:
+  port: 8000
+logging:
+  level:
+    root: DEBUG
