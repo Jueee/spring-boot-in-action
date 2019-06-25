@@ -27,3 +27,12 @@
 7. [自定义Banner](ch03Configuration/3.7自定义Banner.md)
 
 #### ch04.[测试](ch04Test)
+
+[测试 README](ch04Test/README.md)
+
+1. [集成测试自动配置.md](ch04Test/4.1集成测试自动配置.md)
+2. [测试Web应用程序](ch04Test/4.2测试Web应用程序.md)
+3. [测试运行中的应用程序](ch04Test/4.3测试运行中的应用程序.md)
+
+#### ch05.[Groovy与Spring Boot CLI](ch05Groovy)
+
