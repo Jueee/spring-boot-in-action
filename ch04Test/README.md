@@ -1,8 +1,8 @@
 ## 测试
 
-#### 测试分类
+### 测试分类
 
-##### 单元测试
+#### 单元测试
 
 在编写单元测试的时候，Spring通常不需要介入。
 
@@ -10,13 +10,13 @@ Spring鼓励松耦合、接口驱动的设计，这些都能让你很轻松地�
 
 但是在写单元测试时并不需要用到Spring。
 
-##### 集成测试
+#### 集成测试
 
 集成测试要用到Spring。
 
 如果生产应用程序使用Spring来配置并组装组件，那么测试就需要用它来配置并组装那些组件。
 
-#### SpringBootTest
+### SpringBootTest
 
 Spring的 `SpringBootTest` 可以在基于 `JUnit` 的应用程序测试里加载Spring应用程序上下文。
 
@@ -29,7 +29,7 @@ Spring的 `SpringBootTest` 可以在基于 `JUnit` 的应用程序测试里加�
 public class SpringSecurityTests {}
 ```
 
-#### 集成测试方案
+### 集成测试方案
 
 Spring MVC有一个优点：它的编程模型是围绕POJO展开的，在POJO上添加注解，声明如何处理Web请求。
 
@@ -47,7 +47,7 @@ Spring Boot开发者有两个可选的方案能实现这类测试。
 这两种方法各有利弊。很明显，启动一个应用服务器会比模拟Servlet容器要慢一些，但毫无
 疑问基于服务器的测试会更接近真实环境，更接近部署到生产环境运行的情况。
 
-#### 版本升级导致的注解更迭
+### 版本升级导致的注解更迭
 
 [参考资料](<https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-1.4-Release-Notes>)
 
