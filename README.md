@@ -34,5 +34,11 @@
 2. [测试Web应用程序](ch04Test/4.2测试Web应用程序.md)
 3. [测试运行中的应用程序](ch04Test/4.3测试运行中的应用程序.md)
 
-#### ch05.[Groovy与Spring Boot CLI](ch05Groovy)
+#### ch05.[Groovy 与 Spring Boot Cli](ch05Groovy)
+
+1. [Groovy语言入门](ch05Groovy/5.1Groovy语言入门.md)
+2. [开发 Spring Boot Cli 应用程序](ch05Groovy/5.2开发SpringBootCLI应用程序.md)
+3. [Groovy 获取依赖](ch05Groovy/5.3Groovy获取依赖.md)
+4. [用 Cli 运行测试](ch05Groovy/5.4用CLI运行测试.md)
+5. [打包应用程序](ch05Groovy/5.5打包应用程序.md)
 
