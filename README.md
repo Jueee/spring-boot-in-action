@@ -47,3 +47,14 @@
 
 #### ch06.[在 Spring Boot 中使用 Grails](ch06Grails)
 
+1. [Grails 简介](ch06Grails/6.1Grails简介.md)
+2. [使用 GORM 进行数据持久化](ch06Grails/6.2使用GORM进行数据持久化.md)
+3. [使用 Groovy Server Pages 定义视图](ch06Grails/6.3使用GroovyServerPages定义视图.md)
+4. [结合 Spring Boot 与 Grails3](ch06Grails/6.4结合SpringBoot与Grails3.md)
+
+#### ch07.[深入Actuator](ch07Actuator)
+
+[Actuator简介](ch07Actuator/README.md)
+
+1. [揭秘 Actuator 的端点](ch07Actuator/7.1揭秘Actuator的端点.md)
+
