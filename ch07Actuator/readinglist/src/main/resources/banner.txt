@@ -1,0 +1,1 @@
+测试自定义Banner${spring-boot.formatted-version}

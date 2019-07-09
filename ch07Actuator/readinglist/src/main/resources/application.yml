@@ -1,0 +1,35 @@
+logging:
+  level:
+    root: INFO
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    jmx:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always      
+--- 
+
+spring:
+  profiles: production
+server:
+  port: 8443
+  ssl:
+    key-store: mykeys.jks
+    key-store-password: springboot
+    key-password: springboot
+    
+--- 
+
+spring:
+  profiles: test
+server:
+  port: 8000
+logging:
+  level:
+    root: DEBUG
