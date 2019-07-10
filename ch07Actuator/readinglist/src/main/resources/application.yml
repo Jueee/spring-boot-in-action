@@ -2,9 +2,11 @@ logging:
   level:
     root: INFO
     
+    
 management:
   endpoints:
     web:
+      base-path: /test
       exposure:
         include: "*"
     jmx:
