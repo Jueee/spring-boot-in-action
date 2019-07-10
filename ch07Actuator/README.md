@@ -10,3 +10,15 @@ Actuator使用[Micrometer](http://micrometer.io/)来整合上面提到的外部�
 
 [官方文档](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)
 
+#### Actuator 内容
+
+1. [揭秘 Actuator 的端点](7.1揭秘Actuator的端点.md)
+3. [连接Actuator的远程shell](7.2连接Actuator的远程shell.md)
+4. [通过JMX监控应用程序](7.3通过JMX监控应用程序.md)
+5. 定制Actuator
+   1. [定制Actuator：修改端点ID](7.4.1定制Actuator：修改端点ID.md)
+   2. [定制Actuator：启用和禁用端点](7.4.2定制Actuator：启用和禁用端点.md)
+   3. [定制Actuator：添加自定义度量信息](7.4.3定制Actuator：添加自定义度量信息.md)
+   4. [定制Actuator：创建自定义跟踪仓库](7.4.4定制Actuator：创建自定义跟踪仓库.md)
+   5. [定制Actuator：插入自定义健康指示器](7.4.5定制Actuator：插入自定义健康指示器.md)
+6. [保护Actuator端点](7.5保护Actuator端点.md)

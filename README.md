@@ -57,7 +57,6 @@
 [Actuator简介](ch07Actuator/README.md)
 
 1. [揭秘 Actuator 的端点](ch07Actuator/7.1揭秘Actuator的端点.md)
-2. [揭秘Actuator的端点](ch07Actuator/7.1揭秘Actuator的端点.md)
 3. [连接Actuator的远程shell](ch07Actuator/7.2连接Actuator的远程shell.md)
 4. [通过JMX监控应用程序](ch07Actuator/7.3通过JMX监控应用程序.md)
 5. 定制Actuator
@@ -68,5 +67,5 @@
    5. [定制Actuator：插入自定义健康指示器](ch07Actuator/7.4.5定制Actuator：插入自定义健康指示器.md)
 6. [保护Actuator端点](ch07Actuator/7.5保护Actuator端点.md)
 
-#### ch08.[部署Spring Boot应用程序](ch08Deploy)
+#### ch08.[部署 Spring Boot 应用程序](ch08Deploy)
 
