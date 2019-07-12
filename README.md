@@ -69,3 +69,14 @@
 
 #### ch08.[部署 Spring Boot 应用程序](ch08Deploy)
 
+#### ch09.[SpringBoot配置属性](/ch09Attribute)
+
+-	[SpringBoot配置属性之MVC](ch09Attribute/9.1SpringBoot配置属性之MVC.md)
+-	[SpringBoot配置属性之Server](ch09Attribute/9.2SpringBoot配置属性之Server.md)
+-	[SpringBoot配置属性之DataSource](ch09Attribute/9.3SpringBoot配置属性之DataSource.md)
+-	[SpringBoot配置属性之NOSQL](ch09Attribute/9.4SpringBoot配置属性之NOSQL.md)
+-	[SpringBoot配置属性之MQ](ch09Attribute/9.5SpringBoot配置属性之MQ.md)
+-	[SpringBoot配置属性之Security](ch09Attribute/9.6SpringBoot配置属性之Security.md)
+-	[SpringBoot配置属性之Migration](ch09Attribute/9.7SpringBoot配置属性之Migration.md)
+-	[SpringBoot配置属性之其他](ch09Attribute/9.8SpringBoot配置属性之其他.md)
+
