@@ -1,0 +1,84 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1 # 变更集ID
+      author: Jueee 
+      changes:
+        - createTable:
+            tableName: reader # 创建 reader 表
+            columns:
+              - column:
+                  name: username
+                  type: varchar(25)
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(225)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fullname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: book # 创建 book 表
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: author
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(1000)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: isbn
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: reader_username
+                  type: varchar(25)
+                  constraints:
+                    nullable: false
+                    references: reader(username)
+                    foreignKeyName: fk_reader_username
+        - createSequence: # 定义序列
+            sequenceName: hibernate_sequence
+        - insert: # 插入 reader 的初始记录
+           tableName: reader
+           columns:
+             - column:
+                name: username
+                value: craig
+             - column:
+                name: password
+                value: $2a$10$usGif1C5fxfqGNyGrIKvbOP6TX554s7qxPhJuwOOIzVptwFvqBDgS
+             - column:
+                name: fullname
+                value: Craig Walls
+             - column:
+                name: role
+                value: ROLE_READER
+                

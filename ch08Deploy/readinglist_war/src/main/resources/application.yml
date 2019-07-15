@@ -20,11 +20,9 @@ management:
 spring:
   profiles: production
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test
+    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC
     username: root
     password: jue
-  jpa:
-    database-platform: mysql
 server:
   port: 8443
   ssl:
