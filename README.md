@@ -1,10 +1,18 @@
 ## Spring Boot 实战
 
+### 项目说明
+
+本项目是学习《 [Spring Boot实战(第4版)](https://www.manning.com/books/spring-boot-in-action) 》 过程中的笔记。
+
+原书采用的 Spring Boot 版本为 `1.3.0.RELEASE`，在学习过程中，采用了最新的 `2.1.6.RELEASE` 版本。
+
 ### 依赖环境
 
-- 构建工具：maven
+- 主要构建工具：maven
 - JDK：1.8
 - Spring Boot：2.1.6.RELEASE
+- Grails：3.3.10
+- Groovy：2.5.7
 
 ### 目录
 
@@ -18,6 +26,7 @@
 #### ch02.[开发应用程序](ch02Develop)
 
 - [开发第一个应用程序](ch02Develop/README.md)
+- [Spring Boot 开发者工具](ch02Develop/2.1SpringBoot开发者工具.md)
 
 #### ch03.[自定义配置](ch03Configuration)
 
@@ -68,6 +77,12 @@
 6. [保护Actuator端点](ch07Actuator/7.5保护Actuator端点.md)
 
 #### ch08.[部署 Spring Boot 应用程序](ch08Deploy)
+
+1.	[衡量多种部署方式](ch08Deploy/8.1衡量多种部署方式.md)
+2.	[向Java应用服务器里部署WAR文件](ch08Deploy/8.2向Java应用服务器里部署WAR文件.md)
+3.	推上云端
+	1.	[推上云端：部署到CloudFoundry](ch08Deploy/8.3.1推上云端：部署到CloudFoundry.md)
+	2.	[推上云端：部署到Heroku](ch08Deploy/8.3.2推上云端：部署到Heroku.md)
 
 #### ch09.[SpringBoot配置属性](/ch09Attribute)
 
